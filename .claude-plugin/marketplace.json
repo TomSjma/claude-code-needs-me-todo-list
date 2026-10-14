@@ -1,5 +1,6 @@
 {
   "name": "needs-me",
+  "description": "Needs me: a to-do pane for what Claude Code is waiting on you for, plus a one-key shortcut menu",
   "owner": {
     "name": "Tom Sjöberg"
   },
