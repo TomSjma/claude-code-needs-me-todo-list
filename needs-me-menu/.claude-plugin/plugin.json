@@ -1,1 +1,15 @@
-{"name": "needs-me-menu", "version": "0.4.0", "description": "Right-edge icon bar that runs slash commands, each with a one-key shortcut", "types": "./types/index.d.ts", "dependencies": ["needs-me"]}
+{
+  "name": "needs-me-menu",
+  "version": "0.4.0",
+  "description": "A narrow icon bar of one-key shortcuts to your slash commands, with the Needs me count on its icon",
+  "author": {
+    "name": "Tom Sjöberg",
+    "url": "https://github.com/TomSjma"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/TomSjma/claude-code-needs-me-todo-list",
+  "types": "./types/index.d.ts",
+  "dependencies": [
+    "needs-me"
+  ]
+}

@@ -98,3 +98,6 @@ claude plugin validate needs-me
 claude plugin test needs-me
 ```
 
+## License
+
+MIT. See [LICENSE](LICENSE).

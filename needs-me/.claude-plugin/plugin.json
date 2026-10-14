@@ -1,1 +1,12 @@
-{ "name": "needs-me", "version": "0.8.1", "description": "Pane listing questions Claude is waiting on and actions you should do; click one to jump to it", "types": "./types/index.d.ts" }
+{
+  "name": "needs-me",
+  "version": "0.8.1",
+  "description": "A to-do pane for what Claude is waiting on you for: its questions and the actions only you can do, kept per session and across sessions",
+  "author": {
+    "name": "Tom Sjöberg",
+    "url": "https://github.com/TomSjma"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/TomSjma/claude-code-needs-me-todo-list",
+  "types": "./types/index.d.ts"
+}
