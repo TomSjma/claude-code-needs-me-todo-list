@@ -27,7 +27,7 @@ const DEFAULTS: MenuEntry[] = [
   { icon: '📋', hotkey: 'o', command: 'needs-me', label: 'Needs me' },
 ]
 const needsMeCount = { plugin: 'needs-me', key: 'count' } as const
-const entries = atom({ plugin: 'menu', key: 'entries' } as const, DEFAULTS)
+const entries = atom({ plugin: 'needs-me-menu', key: 'entries' } as const, DEFAULTS)
 
 const USAGE = `Usage:
   /menu                                    show or hide the menu

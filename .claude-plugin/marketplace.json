@@ -1,8 +1,16 @@
 {
   "name": "needs-me",
-  "owner": { "name": "Tom Sjöberg" },
+  "owner": {
+    "name": "Tom Sjöberg"
+  },
   "plugins": [
-    { "name": "needs-me", "source": "./needs-me" },
-    { "name": "menu", "source": "./menu" }
+    {
+      "name": "needs-me",
+      "source": "./needs-me"
+    },
+    {
+      "name": "needs-me-menu",
+      "source": "./needs-me-menu"
+    }
   ]
 }

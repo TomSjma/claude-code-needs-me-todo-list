@@ -27,7 +27,7 @@ test('Needs me is a default entry that runs its command', async ($, on) => {
     ran.push('needs-me')
     return { text: 'ok' }
   })
-  const ui = await $.ui.mount({ plugin: 'menu', surface: 'terminal', ...PANE })
+  const ui = await $.ui.mount({ plugin: 'needs-me-menu', surface: 'terminal', ...PANE })
   expect((await ui.find({ key: 'run-o' }))?.text).toContain('Needs me')
   await ui.press({ key: 'run-o' })
   expect(ran).toEqual(['needs-me'])
@@ -37,7 +37,7 @@ test('add and remove change the menu', async ($, on) => {
   mock.store(on)
   const added = await $.command.run(menu('add 🔍 r code-review Review this'))
   expect(added.text).toContain('Review this')
-  const ui = await $.ui.mount({ plugin: 'menu', surface: 'terminal', ...PANE })
+  const ui = await $.ui.mount({ plugin: 'needs-me-menu', surface: 'terminal', ...PANE })
   expect((await ui.find({ key: 'run-r' }))?.text).toContain('🔍 Review this')
 
   const bad = await $.command.run(menu('add 🔍 RR x y'))
@@ -48,7 +48,7 @@ test('add and remove change the menu', async ($, on) => {
 })
 
 test('the dock shows icons only, at any width', async ($) => {
-  const ui = await $.ui.mount({ plugin: 'menu', surface: 'terminal', ...pane(40) })
+  const ui = await $.ui.mount({ plugin: 'needs-me-menu', surface: 'terminal', ...pane(40) })
   const text = (await ui.find({ key: 'run-o' }))?.text ?? ''
   expect(text).toContain('📋')
   expect(text).not.toContain('Needs me')
@@ -58,13 +58,13 @@ test('add without an icon picks one from the command', async ($, on) => {
   mock.store(on)
   await $.command.run(menu('add r code-review Review'))
   await $.command.run(menu('add z unknown-thing Other'))
-  const ui = await $.ui.mount({ plugin: 'menu', surface: 'terminal', ...PANE })
+  const ui = await $.ui.mount({ plugin: 'needs-me-menu', surface: 'terminal', ...PANE })
   expect((await ui.find({ key: 'run-r' }))?.text).toContain('🔎 Review')
   expect((await ui.find({ key: 'run-z' }))?.text).toContain('⚡ Other')
 })
 
 test('the Needs me entry shows how many items wait', async ($, on) => {
   on('state.get', { plugin: 'needs-me', key: 'count' }, () => ({ value: { value: 3, version: 1 } }))
-  const ui = await $.ui.mount({ plugin: 'menu', surface: 'terminal', ...pane(6) })
+  const ui = await $.ui.mount({ plugin: 'needs-me-menu', surface: 'terminal', ...pane(6) })
   expect((await ui.find({ key: 'run-o' }))?.text).toContain('📋3')
 })

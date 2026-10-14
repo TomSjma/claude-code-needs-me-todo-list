@@ -1,6 +1,6 @@
 # Needs me: a to-do list for Claude Code
 
-A side pane in Claude Code that keeps track of what Claude is waiting on you for: the questions it asked and the things only you can do (log in, run a command, check a page). Plus **menu**, a narrow icon bar of one-key shortcuts to your most-used commands.
+A side pane in Claude Code that keeps track of what Claude is waiting on you for: the questions it asked and the things only you can do (log in, run a command, check a page). Plus **needs-me-menu**, a narrow icon bar of one-key shortcuts to your most-used commands.
 
 ## Install
 
@@ -8,7 +8,7 @@ At the prompt of a Claude Code terminal session:
 
 ```
 /plugin install needs-me --marketplace TomSjma/claude-code-needs-me-todo-list
-/plugin install menu --marketplace TomSjma/claude-code-needs-me-todo-list
+/plugin install needs-me-menu --marketplace TomSjma/claude-code-needs-me-todo-list
 ```
 
 Answer `y` to add the marketplace, then pick a scope. Restart Claude Code.
@@ -17,7 +17,7 @@ From a shell instead:
 
 ```
 claude plugin install needs-me --marketplace TomSjma/claude-code-needs-me-todo-list
-claude plugin install menu --marketplace TomSjma/claude-code-needs-me-todo-list
+claude plugin install needs-me-menu --marketplace TomSjma/claude-code-needs-me-todo-list
 ```
 
 The pane docks beside the transcript in fullscreen mode when the terminal is at least 110 columns wide; otherwise it sits above the prompt.
@@ -75,7 +75,7 @@ Switching to another session's tab works on **macOS with Ghostty** only, through
 
 Everything else works in any terminal.
 
-## Menu
+## Menu (needs-me-menu)
 
 A narrow bar of icons along the right edge of the dock. Each entry runs a slash command and has a one-key shortcut: press `ctrl+x tab`, then the key.
 
@@ -97,3 +97,4 @@ Each plugin is a hooks module in `<plugin>/hooks/register.tsx` with tests beside
 claude plugin validate needs-me
 claude plugin test needs-me
 ```
+

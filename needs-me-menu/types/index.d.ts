@@ -7,6 +7,6 @@ export type MenuEntry = {
 
 declare module 'claude-code' {
   interface PluginState {
-    menu: { entries: MenuEntry[] }
+    'needs-me-menu': { entries: MenuEntry[] }
   }
 }
