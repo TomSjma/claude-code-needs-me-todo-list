@@ -1,0 +1,1 @@
+{ "name": "needs-me", "version": "0.8.1", "description": "Pane listing questions Claude is waiting on and actions you should do; click one to jump to it", "types": "./types/index.d.ts" }
